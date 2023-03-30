@@ -74,7 +74,7 @@ namespace GameLauncher
                 try
                 {
                     WebClient webClient = new WebClient();
-                    Version onlineVersion = new Version(webClient.DownloadString("https://download1587.mediafire.com/461hlj1nd4ggJNUow2gymP5MLh4YHqZ_mxMTOnNgUfwXUK3LLGtnhiOeoo6ehjxPcaXsQpEDjzs2BQ3qNW3BDkEDB-03/17732ygduh1psmy/Version.txt"));
+                    Version onlineVersion = new Version(webClient.DownloadString("https://public.am.files.1drv.com/y4mGFKotmmP2i36zgvRrS2OqBfIR3LIv7MIcuyIcOSZj_kqDFuhOifwNvt8gAgZE_jGkTK3O5mPMirX1E3uojy2y1xCRzR-WkpEQ6GCJoC2yu0S_WLInscMm5IVv3zpydfTei6EAzD5uVbKbzS1NuMuRPK1NWAw8irRiQ58FWL7oDepqoj1xNiL4uI_1fcxp4_aTSbLkfjt37cURRnUIUPnISZFotZ76uINyeCC3eWl520?AVOverride=1"));
 
                     if (onlineVersion.IsDifferentThan(localVersion))
                     {
@@ -109,11 +109,11 @@ namespace GameLauncher
                 else
                 {
                     Status = LauncherStatus.downloadingGame;
-                    _onlineVersion = new Version(webClient.DownloadString("https://download1587.mediafire.com/461hlj1nd4ggJNUow2gymP5MLh4YHqZ_mxMTOnNgUfwXUK3LLGtnhiOeoo6ehjxPcaXsQpEDjzs2BQ3qNW3BDkEDB-03/17732ygduh1psmy/Version.txt"));
+                    _onlineVersion = new Version(webClient.DownloadString("https://public.am.files.1drv.com/y4mGFKotmmP2i36zgvRrS2OqBfIR3LIv7MIcuyIcOSZj_kqDFuhOifwNvt8gAgZE_jGkTK3O5mPMirX1E3uojy2y1xCRzR-WkpEQ6GCJoC2yu0S_WLInscMm5IVv3zpydfTei6EAzD5uVbKbzS1NuMuRPK1NWAw8irRiQ58FWL7oDepqoj1xNiL4uI_1fcxp4_aTSbLkfjt37cURRnUIUPnISZFotZ76uINyeCC3eWl520?AVOverride=1"));
                 }
                 //https://download1591.mediafire.com/dlvn6gydx7hgKkLyTZqgB_BHDcexbvbLWH16QTZaX-QUwmTWYI2MjQFQlkqcziZFHlGS0ddOHTxWp6aAnJodiOQ_427B/eyku0dcqphi1drh/CraftGame+Labyrinth+Herobrine+Escape3D.zip
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
-                webClient.DownloadFileAsync(new Uri("https://download1591.mediafire.com/dlvn6gydx7hgKkLyTZqgB_BHDcexbvbLWH16QTZaX-QUwmTWYI2MjQFQlkqcziZFHlGS0ddOHTxWp6aAnJodiOQ_427B/eyku0dcqphi1drh/CraftGame+Labyrinth+Herobrine+Escape3D.zip"), gameZip, _onlineVersion);
+                webClient.DownloadFileAsync(new Uri("https://public.am.files.1drv.com/y4mDyyDOWtXzB6euy3T4dkc0JHLI68qQck79tctil1_qz-poGfSlEJf_wpv-R73BhdAaRDVALfCX0HILNU2iGCNYLV3NBx13ijhHusRPojNBOeGqaJvJ3gh3XlrRLK-_uDouYO3lVwdB6e3qWBceusHmDUtIwQ-_2F9PGdZk7dRuf022o2QpqaNkg9OOgnYcR9pDjYK9pt_2SYBmSE1RkaekevZHRklE9WEy1V_Btkcm0k?AVOverride=1"), gameZip, _onlineVersion);
             }
             catch (Exception ex)
             {
