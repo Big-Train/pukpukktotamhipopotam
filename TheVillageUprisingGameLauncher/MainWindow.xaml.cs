@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -74,7 +74,7 @@ namespace GameLauncher
                 try
                 {
                     WebClient webClient = new WebClient();
-                    Version onlineVersion = new Version(webClient.DownloadString("https://download1587.mediafire.com/461hlj1nd4ggJNUow2gymP5MLh4YHqZ_mxMTOnNgUfwXUK3LLGtnhiOeoo6ehjxPcaXsQpEDjzs2BQ3qNW3BDkEDB-03/17732ygduh1psmy/Version.txt"));
+                    Version onlineVersion = new Version(webClient.DownloadString("https://drive.google.com/uc?export=download&id=1kQgAyaoWm_IrnKwtflDW3ngywzGTxILd"));
 
                     if (onlineVersion.IsDifferentThan(localVersion))
                     {
@@ -109,11 +109,10 @@ namespace GameLauncher
                 else
                 {
                     Status = LauncherStatus.downloadingGame;
-                    _onlineVersion = new Version(webClient.DownloadString("https://download1587.mediafire.com/461hlj1nd4ggJNUow2gymP5MLh4YHqZ_mxMTOnNgUfwXUK3LLGtnhiOeoo6ehjxPcaXsQpEDjzs2BQ3qNW3BDkEDB-03/17732ygduh1psmy/Version.txt"));
+                    _onlineVersion = new Version(webClient.DownloadString("https://drive.google.com/uc?export=download&id=1kQgAyaoWm_IrnKwtflDW3ngywzGTxILd"));
                 }
-                //https://download1591.mediafire.com/dlvn6gydx7hgKkLyTZqgB_BHDcexbvbLWH16QTZaX-QUwmTWYI2MjQFQlkqcziZFHlGS0ddOHTxWp6aAnJodiOQ_427B/eyku0dcqphi1drh/CraftGame+Labyrinth+Herobrine+Escape3D.zip
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
-                webClient.DownloadFileAsync(new Uri("https://download1591.mediafire.com/dlvn6gydx7hgKkLyTZqgB_BHDcexbvbLWH16QTZaX-QUwmTWYI2MjQFQlkqcziZFHlGS0ddOHTxWp6aAnJodiOQ_427B/eyku0dcqphi1drh/CraftGame+Labyrinth+Herobrine+Escape3D.zip"), gameZip, _onlineVersion);
+                webClient.DownloadFileAsync(new Uri("https://firebasestorage.googleapis.com/v0/b/thevillageuprising.appspot.com/o/CraftGame%20Labyrinth%20Herobrine%20Escape3D.zip?alt=media&token=28edca49-0c28-43cf-87c5-0b779f27df42"), gameZip, _onlineVersion);
             }
             catch (Exception ex)
             {
